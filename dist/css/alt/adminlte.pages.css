@@ -754,7 +754,7 @@ body.iframe-mode .main-sidebar {
 }
 
 body.iframe-mode .content-wrapper {
-  margin-left: 0 !important;
+  margin-right: 0 !important;
   margin-top: 0 !important;
   padding-bottom: 0 !important;
 }

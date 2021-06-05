@@ -10,12 +10,12 @@
   visibility: visible;
 
   &.brand-image-xs {
-    right: 18px;
+    left: 18px;
     top: 12px;
   }
 
   &.brand-image-xl {
-    right: 12px;
+    left: 12px;
     top: 6px;
   }
 }
@@ -25,7 +25,7 @@
   visibility: hidden;
 
   &.brand-image-xl {
-    right: 16px;
+    left: 16px;
     top: 8px;
   }
 }
@@ -44,6 +44,7 @@
     @include sidebar-mini-breakpoint ();
   }
 }
+
 @include media-breakpoint-down(md) {
   .sidebar-mini.sidebar-collapse .main-sidebar {
     box-shadow: none !important;
@@ -55,6 +56,7 @@
     @include sidebar-mini-breakpoint ();
   }
 }
+
 @include media-breakpoint-down(sm) {
   .sidebar-mini-md.sidebar-collapse .main-sidebar {
     box-shadow: none !important;
@@ -100,10 +102,12 @@
         }
       }
     }
+
     .nav-legacy {
       .nav-link {
         width: $sidebar-width;
       }
+
       &.nav-child-indent {
         .nav-treeview {
           .nav-link {
@@ -136,10 +140,12 @@
         }
       }
     }
+
     .nav-flat {
       .nav-link {
         width: $sidebar-width;
       }
+
       &.nav-child-indent {
         .nav-treeview {
           .nav-link {
@@ -172,6 +178,7 @@
         }
       }
     }
+
     .nav-child-indent.nav-compact .nav-treeview {
       .nav-link {
         width: calc(#{$sidebar-width} - #{$sidebar-padding-x} * 2 - .5rem);
@@ -201,10 +208,12 @@
         }
       }
     }
+
     .nav-child-indent.nav-legacy.nav-compact {
       .nav-link {
         width: $sidebar-width;
       }
+
       .nav-treeview {
         .nav-link {
           width: calc(#{$sidebar-width} - .5rem);
@@ -235,6 +244,7 @@
         }
       }
     }
+
     .nav-link {
       width: calc(#{$sidebar-width} - #{$sidebar-padding-x} * 2);
       @include transition(width $transition-fn $transition-speed);
@@ -243,6 +253,7 @@
 }
 
 .sidebar-collapse {
+
   &.sidebar-mini,
   &.sidebar-mini-md,
   &.sidebar-mini-xs {
@@ -264,10 +275,11 @@
             width: $sidebar-mini-width;
           }
         }
+
         &.nav-child-indent.nav-compact {
           .nav-treeview {
-            padding-left: 0 !important;
-            margin-left: 0 !important;
+            padding-right: 0 !important;
+            margin-right: 0 !important;
           }
 
           .nav-link {
@@ -281,6 +293,7 @@
         .nav-link {
           width: calc(#{$sidebar-width} - #{$sidebar-padding-x} * 2);
         }
+
         .nav-header {
           display: inline-block;
         }
@@ -290,9 +303,11 @@
           .form-control-sidebar {
             display: inline-block;
           }
+
           .form-control-sidebar ~ .input-group-append {
             display: flex;
           }
+
           .sidebar-search-open .sidebar-search-results {
             display: inline-block;
           }
@@ -303,10 +318,12 @@
             width: calc(#{$sidebar-width} - #{$sidebar-padding-x} * 2);
           }
         }
+
         .nav-legacy {
           .nav-link {
             width: $sidebar-width;
           }
+
           &.nav-child-indent {
             .nav-treeview {
               .nav-link {
@@ -339,10 +356,12 @@
             }
           }
         }
+
         .nav-flat {
           .nav-link {
             width: $sidebar-width;
           }
+
           &.nav-child-indent {
             .nav-treeview {
               .nav-link {
@@ -375,15 +394,18 @@
             }
           }
         }
+
         .nav-child-indent.nav-compact {
           .nav-link {
             width: calc(#{$sidebar-width} - #{$sidebar-padding-x} * 2);
           }
         }
+
         .nav-child-indent.nav-legacy.nav-compact {
           .nav-link {
             width: $sidebar-width;
           }
+
           .nav-treeview {
             .nav-link {
               width: calc(#{$sidebar-width} - .5rem);
@@ -448,13 +470,13 @@
       }
 
       .nav-sidebar.nav-child-indent .nav-treeview {
-        padding-left: 0;
+        padding-right: 0;
       }
 
       .brand-text,
       .user-panel > .info,
       .nav-sidebar .nav-link p {
-        margin-left: -10px;
+        margin-right: -10px;
         animation-name: fadeOut;
         animation-duration: $transition-speed;
         animation-fill-mode: both;
@@ -463,7 +485,7 @@
       }
 
       .nav-sidebar > .nav-item .nav-icon {
-        margin-right: 0;
+        margin-left: 0;
       }
     }
   }
@@ -499,5 +521,5 @@
 .main-sidebar .logo-xs,
 .main-sidebar .logo-xl,
 .sidebar .user-panel .info {
-  @include transition(margin-left $transition-speed linear, opacity $transition-speed ease, visibility $transition-speed ease);
+  @include transition(margin-right $transition-speed linear, opacity $transition-speed ease, visibility $transition-speed ease);
 }

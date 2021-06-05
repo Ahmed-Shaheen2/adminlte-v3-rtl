@@ -53,7 +53,7 @@
     .sidebar .user-panel > .info,
     .nav-sidebar .nav-link p,
     .brand-text {
-      margin-left: -10px;
+      margin-right: -10px;
       animation-name: fadeOut;
       animation-duration: $transition-speed;
       animation-fill-mode: both;
@@ -82,7 +82,7 @@
       &,
       &::before {
         // Don't go away! Just shrink
-        margin-left: 0;
+        margin-right: 0;
         width: $sidebar-mini-width;
       }
 

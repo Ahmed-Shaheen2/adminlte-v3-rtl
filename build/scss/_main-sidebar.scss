@@ -6,6 +6,7 @@
   height: 100vh;
   overflow-y: hidden;
   z-index: $zindex-main-sidebar;
+  direction: rtl;
 
   // Remove Firefox Focusring
   a {
@@ -57,7 +58,7 @@
 
   .image {
     display: inline-block;
-    padding-left: $nav-link-padding-x - .2;
+    padding-right: $nav-link-padding-x - .2;
   }
 
   img {
@@ -67,7 +68,7 @@
 
   .info {
     display: inline-block;
-    padding: 5px 5px 5px 10px;
+    padding: 5px 10px 5px 5px;
   }
 
   .status,
@@ -78,10 +79,12 @@
 
 // Sidebar navigation menu
 .nav-sidebar {
+  padding-right: 0;
   // All levels
   .nav-item {
     > .nav-link {
       margin-bottom: .2rem;
+      display: flex;
 
       .right {
         @include transition(transform $transition-fn $transition-speed);
@@ -92,16 +95,16 @@
   .nav-link > .right,
   .nav-link > p > .right {
     position: absolute;
-    right: 1rem;
+    left: 1rem;
     top: .7rem;
 
     i,
     span {
-      margin-left: .5rem;
+      margin-right: .5rem;
     }
 
     &:nth-child(2) {
-      right: 2.2rem;
+      left: 2.2rem;
     }
   }
 
@@ -126,9 +129,9 @@
     margin-bottom: 0;
 
     .nav-icon {
-      margin-left: .05rem;
+      margin-right: .05rem;
       font-size: 1.2rem;
-      margin-right: .2rem;
+      margin-left: .2rem;
       text-align: center;
       width: $sidebar-nav-icon-width;
 
@@ -167,22 +170,22 @@
   &.nav-child-indent {
     .nav-treeview {
       transition: padding $transition-speed $transition-fn;
-      padding-left: 1rem;
+      padding-right: 1rem;
 
       .text-sm & {
-        padding-left: .5rem;
+        padding-right: .5rem;
       }
     }
 
     &.nav-legacy {
       .nav-treeview {
         .nav-treeview {
-          padding-left: 2rem;
-          margin-left: -1rem;
+          padding-right: 2rem;
+          margin-right: -1rem;
 
           .text-sm & {
-            padding-left: 1rem;
-            margin-left: -.5rem;
+            padding-right: 1rem;
+            margin-right: -.5rem;
           }
         }
       }
@@ -507,8 +510,8 @@
 .sidebar-mini-md .main-sidebar.sidebar-focused,
 .sidebar-mini-xs .main-sidebar.sidebar-focused {
   .nav-compact.nav-sidebar.nav-child-indent:not(.nav-flat) .nav-treeview {
-    padding-left: 1rem;
-    margin-left: -.5rem;
+    padding-right: 1rem;
+    margin-right: -.5rem;
   }
 }
 
@@ -522,7 +525,7 @@
       margin-bottom: 0;
 
       > .nav-icon {
-        margin-left: .55rem;
+        margin-right: .55rem;
       }
     }
   }
@@ -532,7 +535,7 @@
       .nav-item {
         > .nav-link {
           > .nav-icon {
-            margin-left: .4rem;
+            margin-right: .4rem;
           }
         }
       }
@@ -541,32 +544,32 @@
 
   &.nav-child-indent {
     .nav-treeview {
-      padding-left: 0;
+      padding-right: 0;
 
       .nav-icon {
-        margin-left: .85rem;
+        margin-right: .85rem;
       }
 
       .nav-treeview {
-        border-left: .2rem solid;
+        border-right: .2rem solid;
 
         .nav-icon {
-          margin-left: 1.15rem;
+          margin-right: 1.15rem;
         }
 
         .nav-treeview {
           .nav-icon {
-            margin-left: 1.45rem;
+            margin-right: 1.45rem;
           }
 
           .nav-treeview {
             .nav-icon {
-              margin-left: 1.75rem;
+              margin-right: 1.75rem;
             }
 
             .nav-treeview {
               .nav-icon {
-                margin-left: 2.05rem;
+                margin-right: 2.05rem;
               }
             }
           }
@@ -578,31 +581,31 @@
   .sidebar-collapse &.nav-child-indent {
     .nav-treeview {
       .nav-icon {
-        margin-left: .55rem;
+        margin-right: .55rem;
       }
 
       .nav-link {
-        padding-left: calc(#{$nav-link-padding-x} - .2rem);
+        padding-right: calc(#{$nav-link-padding-x} - .2rem);
       }
 
       .nav-treeview {
         .nav-icon {
-          margin-left: .35rem;
+          margin-right: .35rem;
         }
 
         .nav-treeview {
           .nav-icon {
-            margin-left: .15rem;
+            margin-right: .15rem;
           }
 
           .nav-treeview {
             .nav-icon {
-              margin-left: -.15rem;
+              margin-right: -.15rem;
             }
 
             .nav-treeview {
               .nav-icon {
-                margin-left: -.35rem;
+                margin-right: -.35rem;
               }
             }
           }
@@ -619,33 +622,33 @@
   .sidebar-mini-xs .main-sidebar.sidebar-focused & {
     &.nav-compact.nav-sidebar .nav-treeview {
       .nav-icon {
-        margin-left: .4rem;
+        margin-right: .4rem;
       }
     }
 
     &.nav-sidebar.nav-child-indent .nav-treeview {
       .nav-icon {
-        margin-left: .85rem;
+        margin-right: .85rem;
       }
 
       .nav-treeview {
         .nav-icon {
-          margin-left: 1.15rem;
+          margin-right: 1.15rem;
         }
 
         .nav-treeview {
           .nav-icon {
-            margin-left: 1.45rem;
+            margin-right: 1.45rem;
           }
 
           .nav-treeview {
             .nav-icon {
-              margin-left: 1.75rem;
+              margin-right: 1.75rem;
             }
 
             .nav-treeview {
               .nav-icon {
-                margin-left: 2.05rem;
+                margin-right: 2.05rem;
               }
             }
           }
@@ -655,12 +658,12 @@
   }
 
   .nav-icon {
-    @include transition(margin-left $transition-fn $transition-speed);
+    @include transition(margin-right $transition-fn $transition-speed);
   }
 
   .nav-treeview {
     .nav-icon {
-      margin-left: -.2rem;
+      margin-right: -.2rem;
     }
   }
 
@@ -671,7 +674,7 @@
 
       .nav-item {
         > .nav-link {
-          border-left: .2rem solid;
+          border-right: .2rem solid;
         }
       }
     }
@@ -687,10 +690,10 @@
       margin-bottom: 0;
 
       > .nav-icon {
-        margin-left: .55rem;
+        margin-right: .55rem;
 
         .text-sm & {
-          margin-left: .75rem;
+          margin-right: .75rem;
         }
       }
     }
@@ -700,14 +703,14 @@
     > .nav-link {
       &.active {
         background-color: inherit;
-        border-left: 3px solid transparent;
+        border-right: 3px solid transparent;
         box-shadow: none;
 
         > .nav-icon {
-          margin-left: calc(.55rem - 3px);
+          margin-right: calc(.55rem - 3px);
 
           .text-sm & {
-            margin-left: calc(.75rem - 3px);
+            margin-right: calc(.75rem - 3px);
           }
         }
       }
@@ -718,7 +721,7 @@
     .nav-item {
       > .nav-link {
         > .nav-icon {
-          margin-left: calc(.75rem - 3px);
+          margin-right: calc(.75rem - 3px);
         }
       }
     }
@@ -729,8 +732,8 @@
   .sidebar-mini-xs & {
     > .nav-item .nav-link {
       .nav-icon {
-        @include transition(margin-left $transition-fn $transition-speed);
-        margin-left: .6rem;
+        @include transition(margin-right $transition-fn $transition-speed);
+        margin-right: .6rem;
 
       }
     }
@@ -743,11 +746,11 @@
   .sidebar-mini-xs.sidebar-collapse .main-sidebar.sidebar-focused &.nav-child-indent,
   .sidebar-mini-xs.sidebar-collapse .main-sidebar:hover &.nav-child-indent {
     .nav-treeview {
-      padding-left: 1rem;
+      padding-right: 1rem;
 
       .nav-treeview {
-        padding-left: 2rem;
-        margin-left: -1rem;
+        padding-right: 2rem;
+        margin-right: -1rem;
       }
     }
   }
@@ -759,11 +762,11 @@
   .sidebar-mini-xs.sidebar-collapse.text-sm .main-sidebar.sidebar-focused &.nav-child-indent,
   .sidebar-mini-xs.sidebar-collapse.text-sm .main-sidebar:hover &.nav-child-indent {
     .nav-treeview {
-      padding-left: .5rem;
+      padding-right: .5rem;
 
       .nav-treeview {
-        padding-left: 1rem;
-        margin-left: -.5rem;
+        padding-right: 1rem;
+        margin-right: -.5rem;
       }
     }
   }
@@ -773,12 +776,12 @@
   .sidebar-mini-xs.sidebar-collapse & {
     > .nav-item > .nav-link {
       .nav-icon {
-        margin-left: .55rem;
+        margin-right: .55rem;
       }
 
       &.active {
         > .nav-icon{
-          margin-left: .36rem;
+          margin-right: .36rem;
         }
       }
     }
@@ -786,8 +789,8 @@
     &.nav-child-indent {
       .nav-treeview {
         .nav-treeview {
-          padding-left: 0;
-          margin-left: 0;
+          padding-right: 0;
+          margin-right: 0;
         }
       }
     }
@@ -799,12 +802,12 @@
   .sidebar-mini-xs.sidebar-collapse.text-sm & {
     > .nav-item > .nav-link {
       .nav-icon {
-        margin-left: .75rem;
+        margin-right: .75rem;
       }
 
       &.active {
         > .nav-icon{
-          margin-left: calc(.75rem - 3px);
+          margin-right: calc(.75rem - 3px);
         }
       }
     }
@@ -1005,7 +1008,7 @@
 // Sidebar Collapse on Layout Boxed
 .layout-boxed:not(.sidebar-mini):not(.sidebar-mini-md):not(.sidebar-mini-xs) {
   &.sidebar-collapse .main-sidebar {
-    margin-left: 0;
+    margin-right: 0;
   }
   .content-wrapper,
   .main-header,
