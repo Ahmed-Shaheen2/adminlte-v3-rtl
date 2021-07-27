@@ -4,13 +4,14 @@
 
 .brand-link {
   $brand-link-padding-y: $navbar-brand-padding-y + $navbar-padding-y;
-  display: block;
+  display: flex;
+  flex-direction: column;
   font-size: $navbar-brand-font-size;
   line-height: $line-height-lg;
   padding: $brand-link-padding-y $sidebar-padding-x;
   transition: width $transition-speed $transition-fn;
-  white-space: nowrap;
   text-align: right;
+  align-items: center;
 
   &:hover {
     color: $white;
